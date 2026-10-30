@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Forge - gdclone6243diojciuefvhi0eo</title>
+    <meta name="description" content="Geometry Dash-inspired level editor and runner game." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="project-tag">gdclone6243diojciuefvhi0eo</div>
+      <canvas id="game" width="960" height="540"></canvas>
+
+      <div id="menu-screen" class="panel">
+        <div class="logo-wrap">
+          <h1>Dash Forge</h1>
+          <div class="project-id">gdclone6243diojciuefvhi0eo</div>
+        </div>
+
+        <div class="button-stack">
+          <button data-action="campaign" class="primary">Play Campaign</button>
+          <button data-action="editor">Level Editor</button>
+          <button data-action="import">Import JSON</button>
+        </div>
+
+        <input type="file" id="json-input" accept=".json" hidden />
+      </div>
+
+      <div id="editor-toolbar" class="panel hidden">
+        <div class="tool-row">
+          <button data-tool="platform" class="tool active">Platform</button>
+          <button data-tool="spike" class="tool">Spike</button>
+          <button data-tool="goal" class="tool">Goal</button>
+          <button data-tool="delete" class="tool danger">Delete</button>
+        </div>
+        <div class="tool-row">
+          <button id="export-json">Export JSON</button>
+          <button id="playtest">Playtest</button>
+          <button id="editor-back">Back</button>
+        </div>
+      </div>
+
+      <div id="hud" class="hidden">
+        <span id="level-name">Level</span>
+        <button id="menu-btn" class="small">Main Menu</button>
+        <button id="retry-btn" class="small">Retry</button>
+      </div>
+
+      <div id="toast" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
